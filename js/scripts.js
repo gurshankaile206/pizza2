@@ -1,5 +1,5 @@
 function Pizza(toppings, size, price) {
-  this.topping = toppings;
+  this.toppings = toppings;
   this.size = size; 
   this.price = price; 
 }
@@ -16,7 +16,7 @@ const meatLovers = new Pizza(["pepperoni", "sausage", "bacon"], "medium", 10);
 // use .prototype to output price
 
 Pizza.prototype.customerTotal = function() {
-    return "Thank you for choosing Gurshan's Pizza, " + "Your total will be " + meatLovers.prices + " Dollars";
+    return "Thank you for choosing Gurshan's Pizza, " + "Your total will be " + this.prices + " Dollars";
 }
 
 // if we name the functions toppings
@@ -30,5 +30,19 @@ Pizza.prototype.customerTotal = function() {
 
 // function price(pizza) {
 //  let total = 0; 
-//  for (let i = 0; i < toppings.length; i++)
+//  for (let i = 0; i < toppings.length; i++) {
+//      if("Pepperoni") {
+//          total += 5
+//      } else if
+//  }
 // }
+$(document).ready(function() {
+    ("div.pizzas").submit(function(event) {
+        event.preventDefault();
+        const selectedPizza1 = $("input#pizzaChoice1").val();
+        const selectedPizza2 = $("input#pizzaChoice2").val();
+        const selectedPizza3 = $("input#pizzaChoice3").val();
+
+        const
+    })
+})
