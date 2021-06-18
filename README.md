@@ -21,5 +21,11 @@ const cheese = new Pizza("Cheese", "medium", 7);
 const meatLovers = new Pizza("Meat Lovers", "medium", 10);
 Expect((meatLovers.toppings).toEqual(["pepperoni", "sausage", "bacon"]))
 
-Test: It should
+Describe: customerTotal();
+Test: It should output the concatonated string & total price of choosen pizza; 
+code: Pizza.prototype.customerTotal = function() {
+    return "Thank you for choosing Gurshan's Pizza, " + "Your total will be " + meatLovers.price + " Dollars";
+}
+}
+Expect: (meatLovers.customerTotal().toEqual("Thank you for choosing Gurshan's Pizza, Your total will be 10 Dollars"))
 

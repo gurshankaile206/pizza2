@@ -16,5 +16,5 @@ const meatLovers = new Pizza(["pepperoni", "sausage", "bacon"], "medium", 10);
 // use .prototype to calculate price
 
 Pizza.prototype.customerTotal = function() {
-    return "Thank you for choosing Gurshan's Pizza, " + "Your total will be " + meatLovers.prices;
+    return "Thank you for choosing Gurshan's Pizza, " + "Your total will be " + meatLovers.prices + " Dollars";
 }
