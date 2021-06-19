@@ -37,12 +37,13 @@ Pizza.prototype.customerTotal = function() {
 //  }
 // }
 $(document).ready(function() {
-    ("div.pizzas").submit(function(event) {
+    ("from#pizzas").submit(function(event) {
         event.preventDefault();
         const selectedPizza1 = $("input#pizzaChoice1").val();
         const selectedPizza2 = $("input#pizzaChoice2").val();
         const selectedPizza3 = $("input#pizzaChoice3").val();
 
-        const
+        const result = pizza.customerTotal();
+        $("#output").text(result);
     })
 })
