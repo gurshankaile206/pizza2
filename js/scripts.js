@@ -32,4 +32,3 @@ Pizza.prototype.calculateTotal = function() {
     this.totalPrice = this.sizePrice + this.toppingsPrice;
 }
 
-console.log()

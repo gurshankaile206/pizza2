@@ -40,3 +40,8 @@ code: Pizza.prototype.addtopping = function(topping) {
 Expect: (addTopping("cheese").toEqual(3));
 
 Describe: Pizza.prototype.calculateTotal();  
+Test: It should take price of toppings and price of this to calculate total price. 
+code: Pizza.prototype.calculateTotal = function() {
+    this.totalPrice = this.sizePrice + this.toppingsPrice;
+}
+Expect(totalPrice.toEqual(sizePrice + toppingsPrice)
