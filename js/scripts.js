@@ -17,3 +17,19 @@ Pizza.prototype.addSize = function(size) {
     } 
 }
 
+Pizza.prototype.addtopping = function(topping) {
+    this.toppings = topping
+    if (this.toppings === 'pepperoni') {
+        this.toppingPrice = 3; 
+    } else if (this.toppings = 'cheese') {
+        this.toppingPrice === 5; 
+    } else if (this.toppings = "meat lovers") {
+        this.toppingPrice === 7;
+    }
+}
+
+Pizza.prototype.calculateTotal = function() {
+    this.totalPrice = this.sizePrice + this.toppingsPrice;
+}
+
+console.log()

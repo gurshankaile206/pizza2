@@ -1,8 +1,8 @@
 Describe: Pizza(toppings, size, price);
 Test: It should output value of each property when called upon. 
-code: function Pizza() {
-    this.size = undefined; 
-    this.toppings = undefined; 
+code: function Pizza(size, toppings) {
+    this.size = size; 
+    this.toppings = toppings; 
     this.sizePrice = 0; 
     this.toppingsPrice = 0;
     this.totalPrice = 0;  
@@ -22,6 +22,21 @@ code: Pizza.prototype.addSize = function(size) {
         this.sizePrice === 20;
     } 
 }
-Expect:(addsize('medium').toEqual(size))
+Expect:(addsize('medium').toEqual(3));
 
 
+Describe: Pizza.prototype.addTopping = function(topping) 
+Test: It should take input of topping and assign cost based on toppings
+code: Pizza.prototype.addtopping = function(topping) {
+    this.toppings = topping
+    if (this.toppings === 'pepperoni') {
+        this.toppingPrice = 3; 
+    } else if (this.toppings = 'cheese') {
+        this.toppingPrice === 5; 
+    } else if (this.toppings = "meat lovers") {
+        this.toppingPrice === 7;
+    }
+}
+Expect: (addTopping("cheese").toEqual(3));
+
+Describe: Pizza.prototype.calculateTotal();  
