@@ -15,6 +15,5 @@ Pizza.prototype.addSize = function(size) {
     } else  {
         this.sizePrice === 20;
     } 
-    this.calculateTotal();
 }
 
