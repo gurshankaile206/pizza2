@@ -6,29 +6,46 @@ function Pizza() {
     this.totalPrice = 0;  
 }
 
-Pizza.prototype.addSize = function(size) {
-    this.size = size;
+Pizza.prototype.addSize = function(inputSize) {
+    this.size = inputSize;
     if(this.size === 'small'){
         this.sizePrice = 10; 
     } else if (this.size === 'medium'){
         this.sizePrice = 15;
     } else  {
-        this.sizePrice === 20;
-    } 
+        this.sizePrice = 20;
+    }
+    
 }
 
-Pizza.prototype.addtopping = function(topping) {
-    this.toppings = topping
+Pizza.prototype.addTopping = function(inputTopping) {
+    this.toppings = inputTopping;
     if (this.toppings === 'pepperoni') {
         this.toppingPrice = 3; 
-    } else if (this.toppings = 'cheese') {
-        this.toppingPrice === 5; 
-    } else if (this.toppings = "meat lovers") {
-        this.toppingPrice === 7;
+    } else if (this.toppings === 'cheese') {
+        this.toppingPrice = 5; 
+    } else if (this.toppings === "meat lovers") {
+        this.toppingPrice = 7;
     }
+    
 }
 
 Pizza.prototype.calculateTotal = function() {
     this.totalPrice = this.sizePrice + this.toppingsPrice;
 }
 
+
+
+// UI Interface
+
+$(document).ready(function() {
+  $("form#pizzas").submit(function(event) {
+    event.preventDefault();
+    const inputTopping = $('input:radio[name="pizzaChoice"]:checked').val();
+    const inputSize = $('input:radio[name="sizeChoice"]:checked').val();
+
+    const result = Pizza.totalPrice;
+    $("#output").text(result);
+    
+  });
+});
