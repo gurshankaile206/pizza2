@@ -15,7 +15,7 @@ Pizza.prototype.addSize = function(inputSize) {
     } else  {
         this.sizePrice = 20;
     }
-    
+  return this.calculateTotal;
 }
 
 Pizza.prototype.addTopping = function(inputTopping) {
@@ -27,11 +27,12 @@ Pizza.prototype.addTopping = function(inputTopping) {
     } else if (this.toppings === "meat lovers") {
         this.toppingPrice = 7;
     }
-    
+  return this.calculateTotal;
 }
 
 Pizza.prototype.calculateTotal = function() {
     this.totalPrice = this.sizePrice + this.toppingsPrice;
+    return this.totalPrice; 
 }
 
 
@@ -44,7 +45,7 @@ $(document).ready(function() {
     const inputTopping = $('input:radio[name="pizzaChoice"]:checked').val();
     const inputSize = $('input:radio[name="sizeChoice"]:checked').val();
 
-    const result = Pizza.totalPrice;
+    const result = this.totalPrice;
     $("#output").text(result);
     
   });
