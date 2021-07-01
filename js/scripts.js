@@ -15,7 +15,7 @@ Pizza.prototype.addSize = function(inputSize) {
     } else  {
         this.sizePrice = 20;
     }
-  return this.calculateTotal;
+   this.calculateTotal();
 }
 
 Pizza.prototype.addTopping = function(inputTopping) {
@@ -27,7 +27,7 @@ Pizza.prototype.addTopping = function(inputTopping) {
     } else if (this.toppings === "meat lovers") {
         this.toppingPrice = 7;
     }
-  return this.calculateTotal;
+  this.calculateTotal();
 }
 
 Pizza.prototype.calculateTotal = function() {
