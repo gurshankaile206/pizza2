@@ -1,47 +1,52 @@
-Describe: Pizza(toppings, size, price);
-Test: It should output value of each property when called upon. 
-code: function Pizza(size, toppings) {
-    this.size = size; 
-    this.toppings = toppings; 
-    this.sizePrice = 0; 
-    this.toppingsPrice = 0;
-    this.totalPrice = 0;  
-    let output = new Pizza ('medium', 'cheese', 12, 3);
-}
-Expect((output.size).toEqual('medium'));
+# Gurshan's Pizza Parlor
 
-Describe: Pizza.prototype.addsize() 
-Test: It should take input size and assign cost based on size. 
-code: Pizza.prototype.addSize = function(size) {
-    this.size = size;
-    if(this.size === 'small'){
-        this.sizePrice = 10; 
-    } else if (this.size === 'medium'){
-        this.sizePrice = 15;
-    } else  {
-        this.sizePrice === 20;
-    } 
-}
-Expect:(addsize('medium').toEqual(3));
+Practice with Objects, Constructors, and Prototypes.
+
+## Description
+
+A user can order a custom pizza with different sizes and toppings. The price will vary based on the selected toppings and size. 
+
+## Technologies Used
+
+* HTML
+* CSS
+* Javascript
+* JQuery
+* Bootstrap
+* Git 
+* GitHub
+
+## Specs
+
+* Allow user to choose a topping. 
+* Allow user to choose a size of pizza.
+* Pizza price will depend on topping and size.
+* Price will increase if user selects a larger size
+* Price will decrease if user selects a smaller size
+* Input: Small Cheese Pizza Output: 15 dollars
+* Input: Medium Cheese Pizza Output: 20 dollars
+* Input: Large Cheese Pizza Output: 25 dollars 
 
 
-Describe: Pizza.prototype.addTopping = function(topping) 
-Test: It should take input of topping and assign cost based on toppings
-code: Pizza.prototype.addtopping = function(topping) {
-    this.toppings = topping
-    if (this.toppings === 'pepperoni') {
-        this.toppingPrice = 3; 
-    } else if (this.toppings = 'cheese') {
-        this.toppingPrice === 5; 
-    } else if (this.toppings = "meat lovers") {
-        this.toppingPrice === 7;
-    }
-}
-Expect: (addTopping("cheese").toEqual(3));
 
-Describe: Pizza.prototype.calculateTotal();  
-Test: It should take price of toppings and price of this to calculate total price. 
-code: Pizza.prototype.calculateTotal = function() {
-    this.totalPrice = this.sizePrice + this.toppingsPrice;
-}
-Expect(totalPrice.toEqual(sizePrice + toppingsPrice)
+## Setup/Installation Requirements
+
+* Clone this repository.
+* Navigate to index.html file.
+* Right Click and open in the browser of your choice.
+
+## Known Bugs
+
+* No known issues or bugs
+
+## Contact Info
+
+If you have any suggestions or questions please email us at gurshankaile206@gmail.com
+
+## License 
+
+This software is licensed under the MIT license. 
+
+Copyright (c) 2021 Gurshan Kaile
+
+
