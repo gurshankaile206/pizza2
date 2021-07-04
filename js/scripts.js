@@ -43,10 +43,10 @@ $(document).ready(function() {
     const inputTopping = $('input:radio[name="pizzaChoice"]:checked').val();
     const inputSize = $('input:radio[name="sizeChoice"]:checked').val();
 
-let pizzaItem = new Pizza();
-  pizzaItem.addTopping(inputTopping)
-  pizzaItem.addSize(inputSize);
-  const result = "Your total will be " + pizzaItem.calculateTotal() + " Dollars";
-  $("#output").text(result);
+    let pizzaItem = new Pizza();
+    pizzaItem.addTopping(inputTopping)
+    pizzaItem.addSize(inputSize);
+    const result = "Your total will be " + pizzaItem.calculateTotal() + " Dollars";
+    $("#output").text(result);
   });
 });
