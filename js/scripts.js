@@ -6,8 +6,7 @@ function Pizza(size, toppings) {
   this.totalPrice = 0;  
 }
 
-Pizza.prototype.addSize = function(inputSize) {
-  this.size = inputSize;
+Pizza.prototype.addSize = function() {
   if(this.size === 'small'){
     this.sizePrice = 10; 
   } else if (this.size === 'medium'){
@@ -15,10 +14,11 @@ Pizza.prototype.addSize = function(inputSize) {
   } else  {
     this.sizePrice = 20;
   }
+  return this.sizePrice;
 }
 
-Pizza.prototype.addTopping = function(inputTopping) {
-  this.toppings = inputTopping;
+
+Pizza.prototype.addTopping = function() {
   if (this.toppings === 'pepperoni') {
     this.toppingsPrice = 3; 
   } else if (this.toppings === 'cheese') {
@@ -26,10 +26,11 @@ Pizza.prototype.addTopping = function(inputTopping) {
   } else  { 
     this.toppingsPrice = 7;
   }
+  return this.toppingsPrice;
 }
 
 Pizza.prototype.calculateTotal = function() {
-  this.totalPrice = this.sizePrice + this.toppingsPrice;
+  this.totalPrice = this.addSize() + this.addTopping();
   return this.totalPrice; 
 }
 
@@ -43,9 +44,9 @@ $(document).ready(function() {
     const inputTopping = $('input:radio[name="pizzaChoice"]:checked').val();
     const inputSize = $('input:radio[name="sizeChoice"]:checked').val();
 
-    let pizzaItem = new Pizza();
-    pizzaItem.addTopping(inputTopping)
-    pizzaItem.addSize(inputSize);
+    let pizzaItem = new Pizza(inputSize, inputTopping);
+    
+  
     const result = "Your total will be " + pizzaItem.calculateTotal() + " Dollars";
     $("#output").text(result);
   });

@@ -49,4 +49,10 @@ This software is licensed under the MIT license.
 
 Copyright (c) 2021 Gurshan Kaile
 
+## Tests
+
+Describe: Pizza()
+Test: "It should return an object that contains keys for the Pizza constructor"
+Code: let pizzas = new Pizza("small","cheese")
+Expected Output: Pizza{size:"small",toppings:"cheese",sizePrice:0,totalPrice:0} 
 
