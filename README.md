@@ -77,6 +77,11 @@ let pizzas = new Pizza("large","cheese")
  pizzas.addSize()
 Expected Output: pizza{size:"large",toppings:"cheese",sizePrice:20,toppingsPrice:0,totalPrice:0} 
 
-
+Describe: Pizza.prototype.addTopping()
+Test:"If selected topping is pepperoni, it will return the price of topping"
+Code:
+let pizzas = new Pizza("small","pepperoni")
+pizzas.addTopping()
+Expected Output: pizza{size:"small",toppings:"pepperoni",sizePrice:10,toppingsPrice:3,totalPrice:0} 
 
 
