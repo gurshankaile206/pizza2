@@ -57,8 +57,16 @@ Code: let pizzas = new Pizza("small","cheese")
 Expected Output: Pizza{size:"small",toppings:"cheese",sizePrice:0,totalPrice:0} 
 
 Describe:Pizza.prototype.addSize()
-Test:"It should return the price of the small pizza"
+Test:"It should return the price of a small pizza"
 Code: 
 let pizzas = new Pizza("small","cheese")
 pizzas.addSize()
 Expected Output:pizza{size:"small",toppings:"cheese",sizePrice:10,toppingsPrice:0,totalPrice:0} 
+
+Describe:Pizza.prototype.addSize()
+Test:"If selected size of the pizza is medium it will return the price for a medium pizza"
+Code:
+let pizzas = new Pizza("medium","cheese")
+ pizzas.addSize()
+Expected Output:pizza{size:"medium",toppings:"cheese",sizePrice:15,toppingsPrice:0,totalPrice:0}
+
