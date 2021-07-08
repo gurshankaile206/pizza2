@@ -40,7 +40,7 @@ pizzas.addSize()
 ```
 ### Expected Output:
 ```
-pizza{size:"small",toppings:"cheese",sizePrice:10,toppingsPrice:0,totalPrice:0} 
+Pizza{size:"small",toppings:"cheese",sizePrice:10,toppingsPrice:0,totalPrice:0} 
 ```
 
 ## Describe: Pizza.prototype.addSize()
@@ -53,7 +53,7 @@ let pizzas = new Pizza("medium","cheese")
  ```
 ### Expected Output:
 ```
-pizza{size:"medium",toppings:"cheese",sizePrice:15,toppingsPrice:0,totalPrice:0}
+Pizza{size:"medium",toppings:"cheese",sizePrice:15,toppingsPrice:0,totalPrice:0}
 ```
 
 ### Describe: Pizza.prototype.addSize()
@@ -66,7 +66,7 @@ let pizzas = new Pizza("large","cheese")
  ```
 ### Expected Output: 
 ```
-pizza{size:"large",toppings:"cheese",sizePrice:20,toppingsPrice:0,totalPrice:0} 
+Pizza{size:"large",toppings:"cheese",sizePrice:20,toppingsPrice:0,totalPrice:0} 
 ```
 ## Describe: Pizza.prototype.addTopping()
 ### Test:
@@ -78,7 +78,7 @@ pizzas.addTopping()
 ```
 ### Expected Output: 
 ```
-pizza{size:"small",toppings:"pepperoni",sizePrice:10,toppingsPrice:3,totalPrice:0} 
+Pizza{size:"small",toppings:"pepperoni",sizePrice:10,toppingsPrice:3,totalPrice:0} 
 ```
 ## Describe: Pizza.prototype.addTopping()
 ### Test:
@@ -90,7 +90,7 @@ pizzas.addTopping()
 ```
 ### Expected Output: 
 ```
-pizza{size:"small",toppings:"cheese",sizePrice:10,toppingsPrice:5,totalPrice:0} 
+Pizza{size:"small",toppings:"cheese",sizePrice:10,toppingsPrice:5,totalPrice:0} 
 ```
 ## Describe: Pizza.prototype.addTopping()
 ### Test:
@@ -102,7 +102,7 @@ pizzas.addTopping()
 ```
 ### Expected Output: 
 ```
-pizza{size:"small",toppings:"meatLovers",sizePrice:10,toppingsPrice:7,totalPrice:0} 
+Pizza{size:"small",toppings:"meatLovers",sizePrice:10,toppingsPrice:7,totalPrice:0} 
 ```
 ## Describe : Pizza.prototype.calculateTotal()
 ### Test:
@@ -116,10 +116,8 @@ pizzas.calculateTotal()
 ```
 ### Expected Output: 
 ```
-pizza{size:"small",toppings:"pepperoni",sizePrice:10,toppingsPrice:3,totalPrice:13} 
+Pizza{size:"small",toppings:"pepperoni",sizePrice:10,toppingsPrice:3,totalPrice:13} 
 ```
-
-
 
 ## Setup/Installation Requirements
 
