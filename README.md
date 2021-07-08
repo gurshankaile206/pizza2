@@ -56,17 +56,27 @@ Test: "It should return an object that contains keys for the Pizza constructor"
 Code: let pizzas = new Pizza("small","cheese")
 Expected Output: Pizza{size:"small",toppings:"cheese",sizePrice:0,totalPrice:0} 
 
-Describe:Pizza.prototype.addSize()
+Describe: Pizza.prototype.addSize()
 Test:"It should return the price of a small pizza"
 Code: 
 let pizzas = new Pizza("small","cheese")
 pizzas.addSize()
 Expected Output:pizza{size:"small",toppings:"cheese",sizePrice:10,toppingsPrice:0,totalPrice:0} 
 
-Describe:Pizza.prototype.addSize()
+Describe: Pizza.prototype.addSize()
 Test:"If selected size of the pizza is medium it will return the price for a medium pizza"
 Code:
 let pizzas = new Pizza("medium","cheese")
  pizzas.addSize()
 Expected Output:pizza{size:"medium",toppings:"cheese",sizePrice:15,toppingsPrice:0,totalPrice:0}
+
+Describe: Pizza.prototype.addSize()
+Test: "If selected size is not small or medium, it will return price of large pizza" 
+Code: 
+let pizzas = new Pizza("large","cheese")
+ pizzas.addSize()
+Expected Output: pizza{size:"large",toppings:"cheese",sizePrice:20,toppingsPrice:0,totalPrice:0} 
+
+
+
 
