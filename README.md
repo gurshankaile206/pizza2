@@ -98,3 +98,11 @@ let pizzas = new Pizza("small","meatLovers")
 pizzas.addTopping()
 Expected Output: pizza{size:"small",toppings:"meatLovers",sizePrice:10,toppingsPrice:7,totalPrice:0} 
 
+Describe : Pizza.prototype.calculateTotal()
+Test:"Calculate the total price of the pizza where the size is small and the topping is pepperoni"
+Code: 
+let pizzas = new Pizza("small","pepperoni")
+pizzas.addSize()
+pizzas.addTopping()
+pizzas.calculateTotal()
+Expected Output: pizza{size:"small",toppings:"pepperoni",sizePrice:10,toppingsPrice:3,totalPrice:13} 
